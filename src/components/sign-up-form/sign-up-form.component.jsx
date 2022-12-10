@@ -61,8 +61,8 @@ const SignUpForm = () => {
 
                 <FormInput label="Display Name" type="text" required onChange={handleChange} name='displayName' value={displayName}/>
                 <FormInput label="Email" type="text" required onChange={handleChange} name='email' value={email}/>
-                <FormInput label="Password" type="text" required onChange={handleChange} name='password' value={password}/>
-                <FormInput label="Confirm Password" type="text" required onChange={handleChange} name='confirmPassword' value={confirmPassword}/>
+                <FormInput label="Password" type="password" required onChange={handleChange} name='password' value={password}/>
+                <FormInput label="Confirm Password" type="password" required onChange={handleChange} name='confirmPassword' value={confirmPassword}/>
 
                 {/* <label>Display Name</label>
                 <input type="text" required onChange={handleChange} name='displayName' value={displayName}/>
