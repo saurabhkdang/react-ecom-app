@@ -7,16 +7,20 @@ const selectCategoryReducer = (state) => {
 
 export const selectCategories = createSelector(
     [selectCategoryReducer],
-    (categorySlice) => categorySlice.categories
-    //console.log('fired 2');
-    );
+    (categorySlice) => categorySlice.categories    
+);
     
-    export const selectCategoriesMap = createSelector(
-        [selectCategories],
-        (categories) => categories.reduce((acc, category)=>{
-            console.log('fired 3');
+export const selectCategoriesMap = createSelector(
+    [selectCategories],
+    (categories) => categories.reduce((acc, category)=>{
+        console.log('fired 3');
         const { title, items } = category;
         acc[title.toLowerCase()] = items;
         return acc;
     },{})
 );
+
+export const selectCategoriesIsLoading = createSelector(
+    [selectCategoryReducer],
+    (categorySlice) => categorySlice.isLoading
+)
